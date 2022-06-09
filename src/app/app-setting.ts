@@ -1,4 +1,4 @@
-import { environment } from './../environments/environment';
+import { environment } from './../environments/environment.prod';
 
 const ui_url = 'http://localhost:4200/';
 const api_url = 'http://localhost:8000/';
