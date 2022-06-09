@@ -13,22 +13,6 @@ export class MainComponent implements OnInit {
     private route: Router
   ) { }
 
-  public screen_height: string = '';
-
-  @HostListener('window:resize', ['$event'])
-  public onResize(event?: undefined) {
-    let url = './../../../assets/finance-main-background.png'
-    this.screen_height = `
-    height: ${window.innerHeight - 200}px;
-    background-image: url('${url}');  
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 100px 0 0 0;
-    `
-  }
-
   public login(): void {
     this.route.navigate(['main/security/login']);
   }
@@ -38,7 +22,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.onResize()
   }
 
 }
