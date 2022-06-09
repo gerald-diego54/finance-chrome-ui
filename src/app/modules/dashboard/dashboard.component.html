@@ -1,0 +1,12 @@
+<div class="container-fluid shadow-sm bg-body rounded">
+    <a href="/main"><img class="py-4 mx-3" src="./../../../assets/logo.svg" alt="Logo"></a>
+    <a href="">
+        <img src="./../../../assets/bell-fill.svg" style="float: right; width: 2vw; margin: 25px;" alt="notifications">
+        <span class="position-absolute badge rounded-pill bg-danger" style="top: 18px; right: 20px;">
+            99+
+            <span class="visually-hidden">unread messages</span>
+        </span>
+    </a>
+    <p class="clock-font float-end fw-bold fs-5 mt-4 mx-3">{{hour + ' : ' + minutes + ' : ' + seconds + ' ' + status}}</p>
+</div>
+<app-sidebar></app-sidebar>
