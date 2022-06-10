@@ -13,6 +13,18 @@ export class MainComponent implements OnInit {
     private route: Router
   ) { }
 
+  public viewport: boolean = true;
+
+  @HostListener('window:resize', ['$event'])
+  public onResize(event?: any): void {
+    if(window.innerWidth <= 820){
+      this.viewport = false;
+    } else {
+      this.viewport = true;
+    }
+  }
+
+
   public login(): void {
     this.route.navigate(['main/security/login']);
   }
@@ -22,6 +34,7 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.onResize();
   }
 
 }

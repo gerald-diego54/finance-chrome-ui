@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'app-register',
@@ -8,25 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   constructor() { }
-
   
-  public screen_height_2: string = '';
+  public viewport: boolean = true;
 
-  public screenSetting(): void {
-    let url = './../../../../assets/login-background.svg';
-    this.screen_height_2 = `
-      height: ${window.innerHeight - 95}px;
-      background-image: url('${url}'); 
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      padding: 30px 0 0 0;
-    `;
+
+
+  @HostListener('window:resize', ['$event'])
+  public onResize(event?: any): void {
+    if(window.innerWidth <= 820){
+      this.viewport = false;
+    } else {
+      this.viewport = true;
+    }
   }
 
   ngOnInit(): void {
-    this.screenSetting();
+    this.onResize();
   }
 
 }
