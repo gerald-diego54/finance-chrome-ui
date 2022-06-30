@@ -1,40 +1,24 @@
-<div *ngIf="viewport; else mobileViewPort">
+<div *ngIf="viewport; else mobileViewPort;">
     <div class="container-fluid shadow-sm bg-body rounded">
         <a href="/main"><img class="py-4 mx-3" src="assets/logo.svg" alt="Logo"></a>
     </div>
-    <div class="container-fluid" style=" background-image: url('assets/login-background.svg'); width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; padding: 100px 0 0 0; height: 700px">
-        <div class="card mx-auto rounded shadow-lg" style="width: 400px; height: 620px; margin-top: -60px;">
-            <img class="pt-5 pb-3 mx-3 w-75 mx-auto d-block" src="assets/logo.svg" alt="Logo">
-            <div class="card-body w-75 mx-auto d-block">
-                <div class="row">
+    <div class="container-fluid" style=" background-image: url('assets/login-background.svg'); width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; padding: 100px 0 0 0; height: 135vh;">
+        <div class="card mx-auto rounded shadow-lg rounded" style="width: 1200px;">               
+            <form id="payment-form">
+                <div class="row rounded" style="height: 80vh;">
                     <div class="col">
-                        <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Juan Dela Cruz">
-                            <label for="floatingInput" class="fw-bold" style="color: #004972">Firstname</label>
-                        </div>
                     </div>
-                    <div class="col">
-                        <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Juan Dela Cruz">
-                            <label for="floatingInput" class="fw-bold" style="color: #004972">Lastname</label>
-                        </div>
+                    <div class="col" style="background-color: #0068A3; border-radius: 0px 10px 10px 0px;">
+                        <img class="d-block mx-auto mt-4" src="assets/logo-payment.svg" alt="">
+                        <p style="font-family: 'Source Sans 3'; font-style: normal; font-weight: 400; line-height: 20px; color: #FFFFFF;">Try Finance Chrome</p>
+                    <!-- <p class="fw-bold fs-4 border-bottom border-3 pb-2" style="color: #004972; border-color: #004972 !important;">Payments and Checkouts</p>
+                    <div class="form-row">
+                        <div id="card-errors" role="alert"></div>
+                        <div id="card-element" class="field form-control shadow border mt-4 pt-3" style="height: 55px;"></div>
+                    </div> -->
                     </div>
                 </div>
-                <div class="form-floating mb-4">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput" class="fw-bold" style="color: #004972">Email address</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword" class="fw-bold" style="color: #004972">Password</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
-                    <label for="floatingPassword" class="fw-bold" style="color: #004972">Confirm password</label>
-                </div>
-                <button type="button" id="btn-size" class="btn btn-lg btn-blue-sign-in fw-bold">REGISTER</button>
-                <p class="my-3 text-center" style="color: #004972; font-weight: 500;">Don’t have an account? <a href="main/security/login" style="color: #004972;">Sign-in</a> here</p>
-            </div>
+            </form>
         </div>
     </div>
     <div class="container-fluid" style="background-color: #EDEDED;">
@@ -106,7 +90,7 @@
             <div class="row mx-5">
                 <div class="col">
                     <hr class="text-dark w-100 m-auto" style="border-width: 3px;">
-                    <p class="text-center mt-3 fw-bold">Copyright ©2022 | All Rights Reserved</p>
+                    <p class="text-center mt-3 fw-bold">Copyright ©2021 | All Rights Reserved</p>
                 </div>
             </div>
         </div>
@@ -118,14 +102,10 @@
     <div class="container-fluid shadow-sm bg-body rounded">
         <a href="/main"><img class="py-4 w-50" src="assets/logo.svg" alt="Logo"></a>
     </div>
-    <div class="container-fluid" style=" background-image: url('assets/login-background.svg'); width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; padding: 50px 0 0 0; height: 700px;">
-        <div class="card mx-auto rounded shadow-lg" style="width: 300px; height: 600px;">
+    <div class="container-fluid" style=" background-image: url('assets/login-background.svg'); width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; padding: 50px 0 0 0; height: 550px;">
+        <div class="card mx-auto rounded shadow-lg" style="width: 300px; height: 450px;">
             <img class="pt-5 pb-4 mx-3 w-75 mx-auto d-block" src="assets/logo.svg" alt="Logo">
             <div class="card-body w-75 mx-auto d-block">
-                <div class="form-floating mb-4">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Juan Dela Cruz">
-                    <label for="floatingInput" class="fw-bold" style="color: #004972">Name</label>
-                </div>
                 <div class="form-floating mb-4">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput" class="fw-bold" style="color: #004972">Email address</label>
@@ -134,12 +114,8 @@
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword" class="fw-bold" style="color: #004972">Password</label>
                 </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
-                    <label for="floatingPassword" class="fw-bold" style="color: #004972">Confirm password</label>
-                </div>
-                <button type="button" id="btn-size" class="btn btn-lg btn-blue-sign-in fw-bold">REGISTER</button>
-                <p class="my-3 text-center" style="color: #004972; font-weight: 500;">Don’t have an account? <a href="main/security/login" style="color: #004972;">Sign-in</a> here</p>
+                <button routerLink="/main/dashboard" type="button" id="btn-size" class="btn btn-lg btn-blue-sign-in fw-bold">LOG-IN</button>
+                <p class="my-3 text-center" style="color: #004972; font-weight: 500;">Don’t have an account? <a href="main/security/register" style="color: #004972;">Sign-up</a> here</p>
             </div>
         </div>
     </div>
@@ -206,9 +182,10 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center fw-bold">Copyright ©2021 | All Rights Reserved</p>
+                    <p class="text-center fw-bold">Copyright ©2022 | All Rights Reserved</p>
                 </div>
             </div>
         </div>
     </div>
 </ng-template>
+

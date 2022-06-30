@@ -7,16 +7,20 @@
               <img src="assets/grid-fill.svg" alt="grid dashboard">&nbsp;&nbsp;Dashboard
             </button>
           </h2>
-          <!-- <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                <ul *ngFor="let item of items" style="list-style-type: none; margin: 0; padding: 0;">
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
                     <li>
-                        <a href="" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">{{item.label}}</p></a>
+                        <a href="/main/dashboard/true" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">Monthly</p></a>
                         <hr class="text-primary border-2 opacity-50">
                     </li>
+                    <li>
+                      <a href="/main/dashboard/false" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">Yearly</p></a>
+                      <hr class="text-primary border-2 opacity-50">
+                  </li>
                 </ul>
             </div>
-          </div> -->
+          </div>
         </div>
 
         <div class="accordion-item mb-2">
@@ -27,9 +31,13 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <ul *ngFor="let item of items" style="list-style-type: none; margin: 0; padding: 0;">
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
                   <li>
-                    <a href="" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">{{item.label}}</p></a>
+                    <a href="main/dashboard/account-saving" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">Account I</p></a>
+                    <hr class="text-primary border-2 opacity-50">
+                  </li>
+                  <li>
+                    <a href="main/dashboard/account-saving" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">Account II</p></a>
                     <hr class="text-primary border-2 opacity-50">
                   </li>
                 </ul>
@@ -39,26 +47,17 @@
 
           <div class="accordion-item mb-2">
             <h2 class="accordion-header" id="headingOne">
-              <button style="background-color: rgba(0, 104, 163, 20%); color: #004972;" class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+              <a href='main/dashboard/expense' style="background-color: rgba(0, 104, 163, 20%); color: #004972; text-decoration: none;" class="accordion-button fw-bold" type="button">
                 <img src="assets/cash-coin.svg" alt="grid dashboard">&nbsp;&nbsp;Expenses
-              </button>
+              </a>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                  <ul style="list-style-type: none;">
-                      <li>
-                          <a href="" style="text-decoration: none;"><h6>Hello</h6></a>
-                      </li>
-                  </ul>
-              </div>
-            </div>
           </div>
 
           <div class="accordion-item mb-2">
             <h2 class="accordion-header" id="headingOne">
-              <button style="background-color: rgba(0, 104, 163, 20%); color: #004972;" class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+              <a href='main/dashboard/setting' style="background-color: rgba(0, 104, 163, 20%); color: #004972; text-decoration: none;" class="accordion-button fw-bold" type="button">
                 <img src="assets/gear-fill.svg" alt="grid dashboard">&nbsp;&nbsp;Settings
-              </button>
+              </a>
             </h2>
           </div>
 
@@ -72,7 +71,7 @@
               <div class="accordion-body">
                 <ul style="list-style-type: none; margin: 0; padding: 0;">
                     <li>
-                        <a href="/main/security/login" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;">Logout</p></a>
+                        <a href="/main/security/login" style="text-decoration: none;"><p class="fw-bold" style="color: #004972;"><img src="assets/logout-icon.svg" alt="grid dashboard">&nbsp;&nbsp;Logout</p></a>
                         <hr class="text-primary border-2 opacity-50">
                     </li>
                 </ul>

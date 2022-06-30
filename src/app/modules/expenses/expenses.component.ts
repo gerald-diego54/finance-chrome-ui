@@ -9,6 +9,8 @@ export class ExpensesComponent implements OnInit {
 
   constructor() { }
 
+  public viewport: boolean = true;
+
   ngOnInit(): void {
   }
 

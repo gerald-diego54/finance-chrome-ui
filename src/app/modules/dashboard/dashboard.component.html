@@ -1,16 +1,130 @@
 <div *ngIf="viewport; else mobileViewPort">
-    <div class="container-fluid shadow-sm bg-body rounded">
-        <a href="/main"><img class="py-4 mx-3" src="assets/logo.svg" alt="Logo"></a>
-        <a href="">
-            <img src="assets/bell-fill.svg" style="float: right; width: 2vw; margin: 25px;" alt="notifications">
-            <span class="position-absolute badge rounded-pill bg-danger" style="top: 18px; right: 20px;">
-                99+
-                <span class="visually-hidden">unread messages</span>
-            </span>
-        </a>
-        <p class="clock-font float-end fw-bold fs-5 mt-4 mx-3">{{hour + ' : ' + minutes + ' : ' + seconds + ' ' + status}}</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" style="width: 320px;">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col">
+                <div *ngIf="monthly; else yearly">
+                    <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Dashboard</p>
+                    <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                        <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                          <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                          <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">Monthly</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-row mt-5">
+                        <div class="container-fluid shadow-sm border rounded" style="width: 550px; height: 400px;">
+                            <div class="container shadow-sm border rounded mt-5" style="width: 300px; height: 130px;">
+                                <p class="text-center mt-2 fw-bold" style="color: #004972;">Initial Amount</p>
+                                <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                            </div>
+                            <div class="container shadow-sm border rounded mt-5" style="width: 300px; height: 130px;">
+                                <p class="text-center mt-2 fw-bold" style="color: #004972;">End Amount</p>
+                                <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                            </div>  
+                        </div>
+                        <div class="container-fluid shadow-sm border" style="width: 550px; height: 400px;">
+                            <p class="text-center mt-3 fw-bold" style="color: #004972;">Monthly Expense Budget Information</p>
+                            <div class="d-flex flex-row">
+                                <div class="container shadow-sm border rounded mt-2" style="width: 200px; height: 130px;">
+                                    <p class="text-center mt-2 fw-bold" style="color: #004972;">Initial Amount Planned</p>
+                                    <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                                </div>
+                                <div class="container shadow-sm border rounded mt-2" style="width: 200px; height: 130px;">
+                                    <p class="text-center mt-2 fw-bold" style="color: #004972;">Discretionary Expense</p>
+                                    <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                                </div> 
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="container shadow-sm border rounded mt-5" style="width: 200px; height: 130px;">
+                                    <p class="text-center mt-2 fw-bold" style="color: #004972;">Actual Initial Amount</p>
+                                    <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                                </div>
+                                <div class="container shadow-sm border rounded mt-5" style="width: 200px; height: 130px;">
+                                    <p class="text-center mt-2 fw-bold" style="color: #004972;">Discretionary Expense (%)</p>
+                                    <p class="text-center mt-4" style="color: #004972;">- No Data -</p>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="container shadow-sm border rounded mt-5 mb-5" style="width: 1139px; height: 85vh    ;">
+                        <p class="text-center my-4 fw-bold" style="color: #004972;">Budget Expense Difference</p>
+                        <div class="container">
+                            <div class="card mx-auto p-5" style="width: 60vw;">
+                                <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+                                <p class="text-center" style="color: #004972; position: relative; bottom: 230px;">— No Data —</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container" style="width: 1139px; height: 650px;">
+                        <table class="table table-striped text-center">
+                            <thead>
+                              <tr>
+                                <th scope="col" hidden>ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Expense Type</th>
+                                <th scope="col">Expense Name</th>
+                                <th scope="col">Expense Amount</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" colspan="5" class="text-center">- No Data -</th>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+
+
+                <ng-template #yearly>
+                    <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Dashboard</p>
+                    <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                        <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                          <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                          <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">Annually</li>
+                        </ol>
+                    </nav>
+
+                    <div class="container shadow-sm border rounded mt-5 mb-5" style="width: 1139px; height: 85vh;">
+                        <p class="text-center my-4 fw-bold" style="color: #004972;">Budget Expense Difference</p>
+                        <div class="container">
+                            <div class="card mx-auto p-5" style="width: 60vw;">
+                                <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+                                <p class="text-center" style="color: #004972; position: relative; bottom: 230px;">— No Data —</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container" style="width: 1139px; height: 650px;">
+                        <table class="table table-striped text-center">
+                            <thead>
+                              <tr>
+                                <th scope="col" hidden>ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Expense Type</th>
+                                <th scope="col">Expense Name</th>
+                                <th scope="col">Expense Amount</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" colspan="5" class="text-center">- No Data -</th>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </ng-template>
+                
+            </div>
+        </div>
     </div>
-    <app-sidebar></app-sidebar>
 </div>
 
 <ng-template #mobileViewPort>

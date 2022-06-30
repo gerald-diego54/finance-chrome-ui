@@ -1,1 +1,20 @@
-<p>expenses works!</p>
+<div *ngIf="viewport;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" style="width: 320px;">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col">
+                <div>
+                    <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Expense</p>
+                    <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                        <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                          <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                          <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">Expenses</li>
+                        </ol>
+                    </nav>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>

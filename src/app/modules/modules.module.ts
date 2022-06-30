@@ -17,6 +17,11 @@ import { SidebarModule } from 'primeng/sidebar';
 import { AccordionModule } from 'primeng/accordion';
 import { MenuModule } from 'primeng/menu';
 import { BadgeModule } from 'primeng/badge';
+import { ChartModule } from 'primeng/chart';
+import { StripeComponent } from './security/stripe/stripe.component';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { StripeElementComponent } from './security/stripe-element/stripe-element.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { BadgeModule } from 'primeng/badge';
     ExpensesComponent,
     SettingsComponent,
     SidebarComponent,
-    TopbarComponent
+    TopbarComponent,
+    StripeComponent,
+    StripeElementComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +44,9 @@ import { BadgeModule } from 'primeng/badge';
     SidebarModule,
     AccordionModule,
     MenuModule,
-    BadgeModule
+    BadgeModule,
+    ChartModule,
+    DynamicDialogModule
   ]
 })
 export class ModulesModule { }
