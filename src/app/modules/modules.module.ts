@@ -21,6 +21,7 @@ import { ChartModule } from 'primeng/chart';
 import { StripeComponent } from './security/stripe/stripe.component';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { StripeElementComponent } from './security/stripe-element/stripe-element.component';
+import { SettingsLabelComponent } from './settings/settings-label/settings-label.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { StripeElementComponent } from './security/stripe-element/stripe-element
     SidebarComponent,
     TopbarComponent,
     StripeComponent,
-    StripeElementComponent
+    StripeElementComponent,
+    SettingsLabelComponent
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,11 @@ export class SettingsComponent implements OnInit {
 
   constructor() { }
 
+  public viewport: boolean = true;
+  public settings: boolean = true;
+  public labels: boolean = true;
+
+
   ngOnInit(): void {
   }
 

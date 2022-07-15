@@ -5,7 +5,7 @@
                 <app-sidebar></app-sidebar>
             </div>
             <div class="col">
-                <div>
+                <div aria-label="headers">
                     <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Expense</p>
                     <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
                         <ol class="breadcrumb mx-3" style="margin-top: 12px;">
@@ -13,6 +13,78 @@
                           <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">Expenses</li>
                         </ol>
                     </nav>
+                    <div class="container-fluid border rounded shadow-sm mt-5" style="height: 27vh; width: 74.5vw;">
+                        <div class="row">
+                            <div aria-label="data-sets" class="col">
+                                <p class="fw-bold mt-5 mx-4" style="color: #004972;">
+                                    Expense Total per Month 
+                                    <span style="margin-left: 50px;">:</span>
+                                    <span class="fw-normal mx-5">PHP 0.00</span>
+                                </p>
+                                <p class="fw-bold mx-4" style="color: #004972;">
+                                    Date <span style="margin-left: 201px;">:</span>
+                                    <span class="fw-normal mx-5">12/16/2022</span>
+                                </p>
+                                <p class="fw-bold mx-4" style="color: #004972;">
+                                    Expense Remains <span style="margin-left: 107px;">:</span>
+                                    <span class="fw-normal mx-5">PHP 0.00</span>
+                                </p>
+                            </div>
+                            <div aria-label="button-actions" class="col">
+                                <div class="d-flex flex-column float-end my-3" style="width: 15vw;">
+                                    <button class="btn text-white my-3" style="background-color: #004972;">Configure Expense Plan</button>
+                                    <button class="btn text-white" style="background-color: #004972;">Manage Expenses</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5" style="width: 1139px;">
+                        <div class="form-floating">
+                            <input type="text" class="form-control fw-bold" id="floatingInputGrid" style="border: 1px solid #004972; color: #004972;" placeholder="name@example.com">
+                            <label for="floatingInputGrid" style="color: #004972;">Filter</label>
+                        </div>
+                        <table class="table table-striped text-center" id=example>
+                            <thead>
+                                <tr style="color: #004972;">
+                                    <th scope="col" hidden>ID</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Account</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" colspan="6" class="text-center" style="color: #004972;">- No Data -</th>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td scope="row" colspan="2" class="text-start">
+                                       <p style="color: #004972;">Showing 1 to 10 of 0 entries</p>
+                                    </td>
+                                    <td scope="row" colspan="4">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end">
+                                              <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true" style="color: #004972;">Previous</a>
+                                              </li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #ffffff; background-color: #004972;">1</a></li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #004972;">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #004972;">3</a></li>
+                                              <li class="page-item">
+                                                <a class="page-link" href="#" style="color: #004972;">Next</a>
+                                              </li>
+                                            </ul>
+                                        </nav>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                          </table>
+                    </div>
                 </div>              
             </div>
         </div>

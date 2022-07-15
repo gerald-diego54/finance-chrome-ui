@@ -11,6 +11,10 @@ export class ExpensesComponent implements OnInit {
 
   public viewport: boolean = true;
 
+  public tableSorts (): void {
+    
+  }
+
   ngOnInit(): void {
   }
 

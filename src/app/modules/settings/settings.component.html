@@ -1,1 +1,60 @@
-<p>settings works!</p>
+<div *ngIf="viewport;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" style="width: 320px;">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col">
+                <div aria-label="headers">
+                    <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Settings</p>
+                    <div *ngIf="labels; else settingMain">
+                        <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                            <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                              <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                              <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">settings and account</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <ng-template #settingMain>
+                        <nav aria-label="breadcrumb" class="mx-4 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                            <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                              <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                              <li class="breadcrumb-item" style="color: #004972;" aria-current="page"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">settings and account</a></li>
+                              <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">labels</li>
+                            </ol>
+                        </nav>
+                    </ng-template>
+                    
+                    <div class="container-fluid border rounded shadow-sm mt-5 px-5" style="width: 74.5vw;">
+                        <div class="row" *ngIf="settings; else changeLabels">
+                            <div class="col">
+                                <div aria-label="change-password" class="mt-5">
+                                    <a href="" class="text-decoration-none fw-bold" style="color: #0068A3;">Change password</a>
+                                    <p class="fst-italic" style="color: #0068A3;">It's a good idea to use a strong password that you're not using elsewhere</p>
+                                </div>
+                                <div aria-label="change-password" class="mt-4">
+                                    <a href="" class="text-decoration-none fw-bold" style="color: #0068A3;">Change and Add Labels</a>
+                                    <p class="fst-italic" style="color: #0068A3;">Adding and changing of labels to categories your expenses</p>
+                                </div>
+                                <div aria-label="change-password" class="mt-4">
+                                    <a href="" class="text-decoration-none fw-bold" style="color: #0068A3;">Create Accounts</a>
+                                    <p class="fst-italic" style="color: #0068A3;">Creating accounts for work company</p>
+                                </div>
+                            </div>
+                            <div class="col pb-5">
+                                <div aria-label="buttons-action" class="d-flex flex-column float-end mt-5 pb-4">
+                                    <button class="btn text-white mt-2 mb-1" style="background-color: #004972;">Edit</button>
+                                    <button class="btn text-white mt-4" style="background-color: #004972;">Edit</button>
+                                    <button class="btn text-white mt-4" style="background-color: #004972;">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <ng-template #changeLabels>
+                            <app-settings-label></app-settings-label>
+                        </ng-template>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
