@@ -26,11 +26,11 @@ export class MainComponent implements OnInit {
 
 
   public login(): void {
-    this.route.navigate(['main/security/login']);
+    this.route.navigate(['finance-chrome-ui/main/security/login']);
   }
 
   public register(): void {
-    this.route.navigate(['main/security/register']);
+    this.route.navigate(['finance-chrome-ui/main/security/register']);
   }
 
   ngOnInit(): void {

@@ -1,1 +1,316 @@
-<p>account-savings works!</p>
+<div *ngIf="viewport;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" style="width: 320px;">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col">
+                <div aria-label="headers">
+                    <p class="fs-3 fw-bold mt-4 mx-4" style="color: #004972;">Accounts and Savings</p>
+                    <nav aria-label="breadcrumb" class="mx-4 mt-3 border rounded shadow-sm" style="background-color: #FFFFFF;">
+                        <ol class="breadcrumb mx-3" style="margin-top: 12px;">
+                          <li class="breadcrumb-item"><a href="#" class="fw-bold" style="text-decoration: none; color: #004972;">Home</a></li>
+                          <li class="breadcrumb-item active" style="color: #004972;" aria-current="page">Account and Savings</li>
+                        </ol>
+                    </nav>
+
+                    <div class="container-fluid border rounded shadow-sm mt-5" style="width: 74.5vw;">
+                        <div class="row">
+                            <div aria-label="data-sets" class="col">
+                                <p class="fw-bold mt-5 mx-4" style="color: #004972;">
+                                    Account Holder’s 
+                                    <span style="margin-left: 50px;">:</span>
+                                    <span class="fw-normal mx-5">Not Available</span>
+                                </p>
+                                <p class="fw-bold mt-2 mx-4" style="color: #004972;">
+                                    Account Savings <span style="margin-left: 56px;">:</span>
+                                    <span class="fw-normal mx-5">PHP 0.00</span>
+                                </p>
+                                <p class="fw-bold mt-2 mx-4" style="color: #004972;">
+                                    Net Income <span style="margin-left: 92px;">:</span>
+                                    <span class="fw-normal mx-5">PHP 0.00</span>
+                                </p>
+                                <p class="fw-bold mt-2 mx-4" style="color: #004972;">
+                                    Company Name 
+                                    <span style="margin-left: 59px;">:</span>
+                                    <span class="fw-normal mx-5">Not Available</span>
+                                </p>
+                                <p class="fw-bold mt-2 mx-4" style="color: #004972;">
+                                    Contributions <span style="margin-left: 75px;">:</span>
+                                    <span class="fw-normal mx-5">Not Available</span>
+                                </p>
+                                <p class="fw-bold mt-2 mx-4" style="color: #004972;">
+                                    Date <span style="margin-left: 143px;">:</span>
+                                    <span class="fw-normal mx-5">MM/DD/YYYY</span>
+                                </p>
+                                <button (click)="displayModal=true" class="btn text-white mt-3 mb-3 float-end" style="background-color: #004972;">Manage Net Income</button>
+
+                                <p-dialog [closable]="false" [(visible)]="displayModal" [modal]="true" style="width: '70vw'; font-weight: 900 !important" [draggable]="false" [resizable]="false">
+                                    <p-header class="fs-4 fw-bold mt-3" style="color: #004972;">Create New Records for Net Income</p-header>
+                                    <div aria-label="body" class="mt-4">
+                                        <div aria-label="body-header" class="py-2 rounded-top" style="background-color: #004972; width: 150px;">
+                                            <p class="fw-bold text-center" style="color: #FFFFFF;">Income Details</p>
+                                        </div>
+                                        <div aria-label="body-border" style="border: 2px solid #004972; border-radius: 0 10px 10px 10px;">
+
+                                            <div class="row mt-3">
+
+                                                <div class="col">
+                                                    <div aria-label="expenses-name" class="px-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">Account Name</label>
+                                                          </div>
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                                    <label for="floatingInput" style="color: #004972;">Net Income</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="0.00%">
+                                                                    <label for="floatingInput" style="color: #004972;">Savings Percentage</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="0.00%">
+                                                                    <label for="floatingInput" style="color: #004972;">Debt Percentage</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="0.00%">
+                                                                    <label for="floatingInput" style="color: #004972;">Expense Percentage</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                                    <label for="floatingInput" style="color: #004972;">Emergency Funds</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col">
+                                                            <div aria-label="expenses-name" class="px-3 w-100">
+                                                                <div class="form-floating mb-3 mx-auto">
+                                                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="0.00%">
+                                                                    <label for="floatingInput" style="color: #004972;">Tax Percentage</label>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div aria-label="divider">
+                                                        <p class="border-bottom border-3 fw-bold fs-5 mx-3" style="border-color: #004972 !important; color: #004972;">Company</p>
+                                                    </div>
+
+                                                    <div aria-label="expense-type" class="mx-3 mt-3">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control fw-bold" style="border: 1px solid #004972; height: 60px; color: #004972; background-color: transparent;" placeholder="Expenses Type" aria-describedby="basic-addon2" disabled>
+                                                            <span class="input-group-text" style="border: 1px solid #004972; background-color: #004972;" id="basic-addon2"><button (click)="displayCompanyLabels = true" type="button" class="btn border-0"><img src="assets/search.svg" alt="search"></button></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <p-dialog [(visible)]="displayCompanyLabels" [modal]="true" [closable]="false" [draggable]="false" [resizable]="false">
+                                                        <p-header>
+                                                            <p class="fs-5 fw-bold mt-3" style="color: #004972;">Select Currently Work</p>
+                                                        </p-header>
+                                                        <div aria-label="body-dialog">
+                                                            <div aria-label="body-header" class="py-2 rounded-top" style="background-color: #004972; width: 150px;">
+                                                                <p class="fw-bold text-center" style="color: #FFFFFF;">Select Works</p>
+                                                            </div>
+
+                                                            <div aria-label="body-border" style="border-color: #004972; border: 2px solid #004972; border-radius: 0 10px 10px 10px;">
+                                                                <div aria-label="note" class="mx-5">
+                                                                    <p class="fs-6 fst-italic text-center mt-4" style="color: #004972;">Note: Select the company or agency that you currently working on.</p>
+                                                                    <div *ngIf="true; else renderData">
+                                                                        <p class="fs-6 fw-bold text-center py-5" style="color: #004972;">- Not Available -</p>
+                                                                    </div>
+
+                                                                    <ng-template #renderData>
+                                                                        <!-- This line is for coding -->
+                                                                    </ng-template>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ng-template pTemplate="footer">
+                                                            <div aria-label="buttons" class="d-flex flex-row-reverse mt-3">
+                                                                <button class="btn text-white bg-danger" (click)="closeSetLabelCompanyDialog()">Cancel</button>
+                                                                <button class="btn text-white mx-3" style="background-color: #004972; width: 70px;">Save</button>
+                                                            </div>
+                                                        </ng-template>
+
+                                                    </p-dialog>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div aria-label="expenses-name" class="px-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="date" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">Date</label>
+                                                          </div>
+                                                    </div>
+
+                                                    <div aria-label="divider">
+                                                        <p class="border-bottom border-3 fw-bold fs-5 mx-3" style="border-color: #004972 !important; color: #004972;">Contributions</p>
+                                                    </div>
+
+                                                    <div aria-label="expenses-name" class="px-3 mt-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">SSS Contributions</label>
+                                                          </div>
+                                                    </div>
+
+                                                    <div aria-label="expenses-name" class="px-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">PhilHealth Contributions</label>
+                                                          </div>
+                                                    </div>
+
+                                                    <div aria-label="expenses-name" class="px-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">PagIbig Contributions</label>
+                                                          </div>
+                                                    </div>
+
+                                                    <div aria-label="expenses-name" class="px-3 w-100">
+                                                        <div class="form-floating mb-3 mx-auto">
+                                                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                            <label for="floatingInput" style="color: #004972;">Total Contributions</label>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div aria-label="divider">
+                                                        <p class="border-bottom border-3 fw-bold fs-5 mx-3" style="border-color: #004972 !important; color: #004972;">Payment Type</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-3">
+                                                    <div class="col">
+                                                        <div aria-label="expenses-name" class="px-3 w-100">
+                                                            <div class="form-floating mb-3 mx-auto">
+                                                                <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                                <label for="floatingInput" style="color: #004972;">Debt Amount</label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div aria-label="expenses-name" class="px-3 w-100">
+                                                            <div class="form-floating mb-3 mx-auto">
+                                                                <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                                <label for="floatingInput" style="color: #004972;">Savings Amount</label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div aria-label="expenses-name" class="px-3 w-100">
+                                                            <div class="form-floating mb-3 mx-auto">
+                                                                <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                                                <label for="floatingInput" style="color: #004972;">Expense Amount</label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ng-template pTemplate="footer">
+                                        <div aria-label="buttons" class="d-flex flex-row-reverse mt-3">
+                                            <button class="btn text-white bg-danger" (click)="closeAccountSavingsDialog()">Cancel</button>
+                                            <button class="btn text-white mx-3" style="background-color: #004972; width: 70px;">Save</button>
+                                        </div>
+                                    </ng-template>
+                                </p-dialog>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5" style="width: 1139px; margin-bottom: 200px;">
+                        <div class="form-floating">
+                            <input type="text" class="form-control fw-bold" id="floatingInputGrid" style="border: 1px solid #004972; color: #004972;" placeholder="name@example.com">
+                            <label for="floatingInputGrid" style="color: #004972;">Filter</label>
+                        </div>
+                        <table class="table table-striped text-center" id=example>
+                            <thead>
+                                <tr style="color: #004972;">
+                                    <th scope="col" hidden>ID</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Company Name</th>
+                                    <th scope="col">Net Income</th>
+                                    <th scope="col">Contributions</th>
+                                    <th scope="col">Savings</th>
+                                    <th scope="col">Expense</th>
+                                    <th scope="col">Debts</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" colspan="8" class="text-center" style="color: #004972;">- No Data -</th>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td scope="row" colspan="2" class="text-start">
+                                       <p style="color: #004972;">Showing 1 to 10 of 0 entries</p>
+                                    </td>
+                                    <td scope="row" colspan="6">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end">
+                                              <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true" style="color: #004972;">Previous</a>
+                                              </li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #ffffff; background-color: #004972;">1</a></li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #004972;">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#" style="color: #004972;">3</a></li>
+                                              <li class="page-item">
+                                                <a class="page-link" href="#" style="color: #004972;">Next</a>
+                                              </li>
+                                            </ul>
+                                        </nav>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                          </table>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,10 +18,14 @@ import { AccordionModule } from 'primeng/accordion';
 import { MenuModule } from 'primeng/menu';
 import { BadgeModule } from 'primeng/badge';
 import { ChartModule } from 'primeng/chart';
+import { DialogModule } from 'primeng/dialog';
+
 import { StripeComponent } from './security/stripe/stripe.component';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { StripeElementComponent } from './security/stripe-element/stripe-element.component';
 import { SettingsLabelComponent } from './settings/settings-label/settings-label.component';
+import { NewRecordExpenseComponent } from './expenses/new-record-expense/new-record-expense.component';
+import { ValidationDialogComponent } from './validation-dialog/validation-dialog.component';
 
 
 @NgModule({
@@ -38,7 +42,9 @@ import { SettingsLabelComponent } from './settings/settings-label/settings-label
     TopbarComponent,
     StripeComponent,
     StripeElementComponent,
-    SettingsLabelComponent
+    SettingsLabelComponent,
+    NewRecordExpenseComponent,
+    ValidationDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -48,7 +54,8 @@ import { SettingsLabelComponent } from './settings/settings-label/settings-label
     MenuModule,
     BadgeModule,
     ChartModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    DialogModule
   ]
 })
 export class ModulesModule { }

@@ -44,13 +44,14 @@
                             <div class="col pb-5">
                                 <div aria-label="buttons-action" class="d-flex flex-column float-end mt-5 pb-4">
                                     <button class="btn text-white mt-2 mb-1" style="background-color: #004972;">Edit</button>
-                                    <button class="btn text-white mt-4" style="background-color: #004972;">Edit</button>
+                                    <button (click)="renderSetLabels()" class="btn text-white mt-4" style="background-color: #004972;">Edit</button>
                                     <button class="btn text-white mt-4" style="background-color: #004972;">Edit</button>
                                 </div>
                             </div>
                         </div>
+
                         <ng-template #changeLabels>
-                            <app-settings-label></app-settings-label>
+                            <app-settings-label (renderGeneralSettings)="dataFromChildSettingsLabel($event)"></app-settings-label>
                         </ng-template>
                     </div>
                 </div>              

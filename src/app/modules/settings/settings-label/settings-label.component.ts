@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-settings-label',
@@ -9,7 +9,15 @@ export class SettingsLabelComponent implements OnInit {
 
   constructor() { }
 
+  @Output() renderGeneralSettings = new EventEmitter();
+  public renderSettings: boolean = true;
+
+  public renderSettingsGeneral(): void {
+    this.renderGeneralSettings.emit(this.renderSettings);
+  }
+
   ngOnInit(): void {
+    this.renderSettingsGeneral();
   }
 
 }

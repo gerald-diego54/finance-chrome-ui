@@ -23,7 +23,7 @@
                                 </p>
                                 <p class="fw-bold mx-4" style="color: #004972;">
                                     Date <span style="margin-left: 201px;">:</span>
-                                    <span class="fw-normal mx-5">12/16/2022</span>
+                                    <span class="fw-normal mx-5">MM/DD/YYYY</span>
                                 </p>
                                 <p class="fw-bold mx-4" style="color: #004972;">
                                     Expense Remains <span style="margin-left: 107px;">:</span>
@@ -32,14 +32,24 @@
                             </div>
                             <div aria-label="button-actions" class="col">
                                 <div class="d-flex flex-column float-end my-3" style="width: 15vw;">
-                                    <button class="btn text-white my-3" style="background-color: #004972;">Configure Expense Plan</button>
-                                    <button class="btn text-white" style="background-color: #004972;">Manage Expenses</button>
+                                    <button (click)="showNewRecordDialog()" class="btn text-white my-3" style="background-color: #004972;">Configure Expense Plan</button>
+                                    <button (click)="showConfigDialog()" class="btn text-white" style="background-color: #004972;">Manage Expenses</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="container mt-5" style="width: 1139px;">
+                    <div class="container shadow-sm border rounded mt-5 mb-5" style="width: 1139px; height: 85vh    ;">
+                        <p class="text-center my-4 fw-bold" style="color: #004972;">Budget Expense Difference Per Day</p>
+                        <div class="container">
+                            <div class="card mx-auto my-5" style="width: 60vw;">
+                                <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+                                <p class="text-center" style="color: #004972; position: relative; bottom: 230px;">— No Data —</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5" style="width: 1139px; margin-bottom: 200px;">
                         <div class="form-floating">
                             <input type="text" class="form-control fw-bold" id="floatingInputGrid" style="border: 1px solid #004972; color: #004972;" placeholder="name@example.com">
                             <label for="floatingInputGrid" style="color: #004972;">Filter</label>

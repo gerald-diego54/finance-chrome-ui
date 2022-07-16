@@ -1,0 +1,116 @@
+<div>
+    <div *ngIf="notConfig; else config">
+        <div aria-label="new-record-expense" *ngIf="newRecordExpense; else selectLabelExpenseType">
+            <div class="container-fluid">
+                <div aria-label="header">
+                    <p class="fs-4 fw-bold mt-3" style="color: #004972;">Create New Records for Expenses</p>
+                </div>
+                <div aria-label="label" style="background-color: #004972; width: 140px; height: 50px;" class="rounded-top">
+                    <p class="text-center text-white fw-bold" style="padding-top: 10px;">Expense Details</p>
+                </div>
+                <div aria-label="body">
+                    <div class="pt-5" style="border: 2px solid #004972; border-radius: 0 10px 10px 10px;">
+                        <div aria-label="expense-type" class="px-5 w-100">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control fw-bold" style="border: 1px solid #004972; height: 60px; color: #004972; background-color: transparent;" placeholder="Expenses Type" aria-describedby="basic-addon2" disabled>
+                                <span class="input-group-text" style="border: 1px solid #004972; background-color: #004972;" id="basic-addon2"><button type="button" (click)="showSetLabel()" class="btn border-0"><img src="assets/search.svg" alt="search"></button></span>
+                            </div>
+                        </div>
+                        <div aria-label="expenses-name" class="px-5 w-100">
+                            <div class="form-floating mb-3 mx-auto">
+                                <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput" style="color: #004972;">Expenses Name</label>
+                              </div>
+                        </div>
+                        <div class="d-flex flex-row px-5 pb-4">
+                            <div aria-label="expense-type" class="w-100" style="margin-right: 10px;">
+                                <div class="form-floating mb-3 w-100">
+                                    <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                                    <label for="floatingInput" style="color: #004972;">Expense amount</label>
+                                  </div>
+                            </div>
+                            <div aria-label="expenses-name" class="w-100" style="margin-left: 10px;">
+                                <div class="form-floating mb-3 w-100">
+                                    <input type="date" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput" style="color: #004972;">Date</label>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div aria-label="buttons" class="d-flex flex-row-reverse mt-3">
+                        <button class="btn text-white bg-danger" (click)="closeRecordExpenseDialog()">Cancel</button>
+                        <button class="btn text-white mx-3" style="background-color: #004972; width: 70px;">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #selectLabelExpenseType aria-label="select-expense-type">
+            <div class="container-fluid">
+                <div aria-label="header">
+                    <p class="fs-4 fw-bold mt-3" style="color: #004972;">Create New Records for Expenses</p>
+                </div>
+                <div aria-label="label" style="background-color: #004972; width: 180px; height: 50px;" class="rounded-top">
+                    <p class="text-center text-white fw-bold" style="padding-top: 10px;">Select Expense Labels</p>
+                </div>
+                <div aria-label="body">
+                    <div aria-label="border-part" style="border: 2px solid #004972; border-radius: 0 10px 10px 10px;">
+                        <div aria-label="notes">
+                            <p class="text-center fst-italic mt-1" style="color: #004972;">Select the expense type labels. Note: if you want to add new labels just go to wsettings and add desired labels</p>
+                        </div>
+                        <div aria-label="choices-label">
+                            <div *ngIf="noSetLabel; else setLabelAvailable">
+                                <p class="text-center my-5">- No Available Data - </p>
+                            </div>
+                            <ng-template #setLabelAvailable></ng-template>
+                        </div>
+                    </div>
+                    <div aria-label="buttons" class="d-flex flex-row-reverse mt-3">
+                        <button class="btn text-white bg-danger" (click)="closeRecordExpenseDialog()">Cancel</button>
+                        <button class="btn text-white mx-3" (click)="showNewRecord()" style="background-color: #004972; width: 100px;">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+
+    <ng-template #config>
+        <div class="container-fluid">
+            <div aria-label="header">
+                <p class="fs-4 fw-bold mt-3" style="color: #004972;">Configure Initial Expense</p>
+            </div>
+            <div aria-label="label" style="background-color: #004972; width: 140px; height: 50px;" class="rounded-top">
+                <p class="text-center text-white fw-bold" style="padding-top: 10px;">Configuration</p>
+            </div>
+            <div aria-label="body">
+                <div class="pt-5" style="border: 2px solid #004972; border-radius: 0 10px 10px 10px;">
+                    <div aria-label="expenses-name" class="px-5 w-100">
+                        <div class="form-floating mb-3 mx-auto">
+                            <input type="text" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com" value="PHP 0.00">
+                            <label for="floatingInput" style="color: #004972;">Expense Initial Amount</label>
+                          </div>
+                    </div>
+                    <div class="d-flex flex-row px-5 pb-4">
+                        <div aria-label="expenses-name" class="w-100">
+                            <div class="form-floating mb-3 w-100">
+                                <input type="date" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput" style="color: #004972;">Date Start</label>
+                              </div>
+                        </div>
+                        <div aria-label="expenses-name" class="w-100" style="margin-left: 10px;">
+                            <div class="form-floating mb-3 w-100">
+                                <input type="date" style="border: 1px solid #004972; color: #004972;" class="form-control fw-bold" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput" style="color: #004972;">Date End</label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-label="buttons" class="d-flex flex-row-reverse mt-3">
+                    <button class="btn text-white bg-danger" (click)="closeRecordExpenseDialog()">Cancel</button>
+                    <button class="btn text-white mx-3" style="background-color: #004972; width: 70px;">Save</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    
+</div>
